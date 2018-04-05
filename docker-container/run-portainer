@@ -1,5 +1,5 @@
 PMNT="/mnt/docker/portainer"
-[ -d "$PMNT" ] || ( mkdir $PMNT && "echo folder $PMNT created" )
+[ -d "$PMNT" ] || ( mkdir -p $PMNT && echo "folder $PMNT created" )
 [ -d "$PMNT" ] && \
 docker run -d \
    -p 9000:9000 \
