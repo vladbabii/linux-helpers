@@ -1,0 +1,2 @@
+# param 1 - http://<ip>:<port>
+echo "Acquire::http::Proxy \"$1\";" > /etc/apt/apt.conf.d/01proxy
