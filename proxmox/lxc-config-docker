@@ -1,6 +1,6 @@
 LCONFIG="/etc/pve/lxc/$1.conf"
 if [ -f $LCONFIG ]; then
-  echo "lxc.aa_profile: unconfined" >> $LCONFIG
+  echo "lxc.apparmor.profile: unconfined" >> $LCONFIG
   echo "lxc.cgroup.devices.allow: a" >> $LCONFIG
   echo "lxc.cap.drop:" >> $LCONFIG
   echo "added!"
