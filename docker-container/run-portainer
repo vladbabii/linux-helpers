@@ -1,0 +1,12 @@
+PMNT="/mnt/docker/portainer"
+[ -d "$PMNT" ] && mkdir $PMNT && "echo folder $PMNT created"
+[ -d "$PMNT" ] && \
+docker run -d \
+   -p 9000:9000 \
+   --name portainer \
+   --label hidden=true \
+   --restart=always \
+   -v /var/run/docker.sock:/var/run/docker.sock \
+   -v $PMNT:/data portainer/portainer \
+|| \
+echo "folder $PMNT does not exist"
