@@ -1,0 +1,6 @@
+LIST=$(zfs list | grep "rpool/ROOT/pve-1/" | awk -F" " '{print $1}')
+for ITEM in $LIST
+do
+  echo zfs set canmount=off $ITEM
+  zfs set canmount=off $ITEM
+done
