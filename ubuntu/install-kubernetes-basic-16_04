@@ -17,4 +17,4 @@ add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu
 stable"
 
 apt update
-apt install docker-ce=17.03.2~ce-0~ubuntu-xenial kubelet kubeadm kubectl kubernetes-cni -y
+apt install --allow-downgrades -y docker-ce=17.03.2~ce-0~ubuntu-xenial kubelet kubeadm kubectl kubernetes-cni
