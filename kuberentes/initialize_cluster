@@ -1,0 +1,2 @@
+## use: bash kubernetes/intialize_cluster <interface>
+kubeadm init --pod-network-cidr 10.95.0.0/16 --service-cidr 10.96.0.0/12 --service-dns-domain "k8s" --apiserver-advertise-address $(ifconfig $1 | grep 'inet addr'| cut -d':' -f2 | awk '{print $1}')
