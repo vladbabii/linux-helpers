@@ -1,7 +1,7 @@
 # based_on https://gist.github.com/ruanbekker/38a38aea5f325f7fa4a19e795ef4f0d0
 
 apt update && apt upgrade -y
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - 
 
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
